@@ -33,9 +33,9 @@ const ShowSummary = () => {
   }
 
   return (
-    <div className="flex items-center justify-center mt-10 gap-10">
+    <div className="flex flex-col md:flex-row items-center justify-center mt-10 gap-2 lg:gap-10">
       <Image
-        className="h-[500px] w-1/3  rounded-lg"
+        className="h-[500px] max-w-[600px] w-full sm:w-1/2 md:w-2/3 lg:w-1/3 rounded-lg md:ml-10 "
         src={
           show.show.image
             ? show.show.image.original
@@ -46,10 +46,11 @@ const ShowSummary = () => {
         width={300}
         priority
       />
-
-      <div className="w-1/3 flex flex-col px-8 mb-auto text-gray-200">
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 flex flex-col px-8 mb-auto text-gray-200">
         <h1 className="text-2xl font-bold mb-4">{show.show.name}</h1>
-        <Ratings show={show.show} />
+        <div className="my-4">
+          <Ratings show={show.show} />
+        </div>
         <p className="mb-4">{parse(show.show.summary)}</p>
 
         <button

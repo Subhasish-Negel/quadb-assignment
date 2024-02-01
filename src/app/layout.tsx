@@ -11,13 +11,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  modal,
+}: {
+  children: React.ReactNode;
+  modal: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body
         className={`${inter.className} bg-gradient-to-r from-slate-900 to-stone-700`}
       >
-        <main>{children}</main>
+        <main>
+          {children}
+          {modal}
+        </main>
       </body>
     </html>
   );

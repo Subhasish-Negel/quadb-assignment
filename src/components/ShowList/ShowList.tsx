@@ -22,7 +22,7 @@ export const ShowsList = () => {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-screen font-semibold text-4xl text-white gap-6 animate-ping">
+      <div className="flex justify-center items-center min-h-screen font-semibold text-4xl text-white gap-6">
         <AiOutlineLoading3Quarters className="animate-spin" />
         <p>Please wait...</p>
       </div>

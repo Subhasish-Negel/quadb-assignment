@@ -44,7 +44,7 @@ const BookingFormModal = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center mx-auto py-6 bg-black/30 rounded-lg w-full">
+    <div className="flex flex-col justify-start items-center mx-auto py-6 bg-black/30 rounded-lg min-h-full w-full">
       <form
         onSubmit={handleSubmit}
         className="w-3/5 flex justify-center items-center gap-6 flex-col sm:flex-row"

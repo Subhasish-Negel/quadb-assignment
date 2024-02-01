@@ -1,5 +1,4 @@
 "use client";
-
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { useRouter } from "next/navigation";
@@ -24,7 +23,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center text-center sm:items-center sm:p-0">
+          <div className="flex min-h-full h-1/2 items-end justify-center text-center sm:items-center sm:p-0">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -34,7 +33,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900 to-stone-700 text-left shadow-xl transition-all sm:my-2 w-full sm:max-w-lg">
+              <Dialog.Panel className="relative transform overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900 flex items-center to-stone-700 text-left shadow-xl transition-all w-full h-2/3 md:w-2/3 xl:w-1/3 p-4">
                 {children}
               </Dialog.Panel>
             </Transition.Child>
